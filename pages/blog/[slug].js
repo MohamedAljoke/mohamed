@@ -1,16 +1,15 @@
-import React, { useRef, useState } from "react";
-import { getPostBySlug, getAllPosts } from "../../utils/api";
-import Header from "../../components/Header";
-import ContentSection from "../../components/ContentSection";
-import Footer from "../../components/Footer";
-import Head from "next/head";
-import { useIsomorphicLayoutEffect } from "../../utils";
-import { stagger } from "../../animations";
-import Button from "../../components/Button";
-import BlogEditor from "../../components/BlogEditor";
-import { useRouter } from "next/router";
-import Cursor from "../../components/Cursor";
-import data from "../../data/portfolio.json";
+import React, { useRef, useState } from 'react';
+import { getPostBySlug, getAllPosts } from '../../utils/api';
+import Header from '../../components/Header';
+import ContentSection from '../../components/ContentSection';
+import Footer from '../../components/Footer';
+import Head from 'next/head';
+import { useIsomorphicLayoutEffect } from '../../utils';
+import { stagger } from '../../animations';
+import Button from '../../components/Button';
+import BlogEditor from '../../components/BlogEditor';
+import { useRouter } from 'next/router';
+import data from '../../data/portfolio';
 
 const BlogPost = ({ post }) => {
   const [showEditor, setShowEditor] = useState(false);
@@ -25,16 +24,11 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{"Blog - " + post.title}</title>
+        <title>{'Blog - ' + post.title}</title>
         <meta name="description" content={post.preview} />
       </Head>
-      {data.showCursor && <Cursor />}
 
-      <div
-        className={`container mx-auto mt-10 ${
-          data.showCursor && "cursor-none"
-        }`}
-      >
+      <div className={`container mx-auto mt-10 `}>
         <Header isBlog={true} />
         <div className="mt-10 flex flex-col">
           <img
@@ -58,9 +52,9 @@ const BlogPost = ({ post }) => {
         <ContentSection content={post.content}></ContentSection>
         <Footer />
       </div>
-      {process.env.NODE_ENV === "development" && (
+      {process.env.NODE_ENV === 'development' && (
         <div className="fixed bottom-6 right-6">
-          <Button onClick={() => setShowEditor(true)} type={"primary"}>
+          <Button onClick={() => setShowEditor(true)} type={'primary'}>
             Edit this blog
           </Button>
         </div>
@@ -79,14 +73,14 @@ const BlogPost = ({ post }) => {
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
-    "date",
-    "slug",
-    "preview",
-    "title",
-    "tagline",
-    "preview",
-    "image",
-    "content",
+    'date',
+    'slug',
+    'preview',
+    'title',
+    'tagline',
+    'preview',
+    'image',
+    'content',
   ]);
 
   return {
@@ -99,7 +93,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"]);
+  const posts = getAllPosts(['slug']);
 
   return {
     paths: posts.map((post) => {
