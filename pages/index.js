@@ -101,6 +101,8 @@ export default function Home() {
                 img={project.imageSrc}
                 name={project.title}
                 description={project.description}
+                repository={project.url}
+                webSite={project.webSite}
                 onClick={() => window.open(project.url)}
               />
             ))}

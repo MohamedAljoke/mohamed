@@ -25,45 +25,55 @@ const portfolioData = {
   projects: [
     {
       id: '1',
-      title: 'Mext Plataform',
-      description: 'Web Design',
+      title: 'Mext Plataform frontEnd',
+      description: `This is an application made to help students of the mext scholarship to study, this is the frontEnd where the students can login, view some topics, material and answer questions.
+        It is made with NextJs. You can use this login to test the webSite
+          username: teste@email.com and
+          password: teste123
+`,
       imageSrc: imagesData.mextFront,
-      url: 'http://chetanverma.com/',
+      url: 'https://github.com/MohamedAljoke/mext-front',
+      webSite: 'https://mext-front.vercel.app/',
     },
     {
       id: '2',
-      title: 'Project Two',
-      description: 'Web Development',
-      imageSrc: imagesData.mextFront,
-      url: 'http://chetanverma.com/',
+      title: 'Mext Project Admin Plataform',
+      description: `This is the admin project for the mext, where i can used it to add subjects, videos, questions, materials and answers. It is made with NextJs.You can use this login to test the webSite
+      username: teste@email.com and
+      password: teste123`,
+      imageSrc: imagesData.mextAdmin,
+      url: 'https://github.com/MohamedAljoke/mext-admin',
+      webSite: 'https://mext-admin.vercel.app/',
     },
     {
       id: '3',
-      title: 'Project Three',
-      description: 'Design',
-      imageSrc: imagesData.mextFront,
-      url: 'http://chetanverma.com/',
+      title: 'Mext Project API',
+      description: `This is the server for the mext project made with NodeJS using adonis frameWork and a MySql database, it has auth middleware and was deployed to heroku, EC2 and Fly.io. The database is hosted on amazon RDS.
+      It has swagger docs and postman collection.
+      The application as a hole is in a container.
+      Also this application has a gitHub actions work flow for CI.
+      `,
+      imageSrc: imagesData.mextApi,
+      url: 'https://github.com/MohamedAljoke/mext-plataform-api',
+      webSite: 'https://mext.fly.dev/docs/index.html',
     },
     {
       id: '4',
-      title: 'Project Four',
-      description: 'Marketing',
-      imageSrc: imagesData.mextFront,
-      url: 'http://chetanverma.com/',
+      title: 'Coffee Shops',
+      description:
+        'A project i did to learn Next.js and AIRTABLE with SSR && SWR for up voting, it fetches data from an external api and imgs from UNSPLASH api. add up votes and find more stores near me buttons',
+      imageSrc: imagesData.coffeShop,
+      url: 'https://github.com/MohamedAljoke/next-coffee',
+      webSite: 'https://next-coffee-bay.vercel.app/',
     },
     {
       id: '5',
-      title: 'Project Five',
-      description: 'Development',
-      imageSrc: imagesData.mextFront,
-      url: 'http://chetanverma.com/',
-    },
-    {
-      id: '6',
-      title: 'Project Six',
-      description: 'Design & Development',
-      imageSrc: imagesData.mextFront,
-      url: 'http://chetanverma.com/',
+      title: 'Nextflix',
+      description:
+        'Netflix clone with next.js, using SSR and auth with magic links, consuming youtube api to show data. i am working on the project TODOS: video detalhes page, watch again section and like videos.',
+      imageSrc: imagesData.netflix,
+      url: 'https://nextflix-three.vercel.app/',
+      webSite: 'https://nextflix-three.vercel.app/',
     },
   ],
   services: [
