@@ -62,7 +62,7 @@ export default function Home() {
           handleAboutScroll={handleAboutScroll}
         />
         <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
+          <div className="">
             <p
               ref={textOne}
               className="tablet:text-6xl laptop:text-6xl laptopl:text-[70px] p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
@@ -81,20 +81,21 @@ export default function Home() {
             >
               {data.headerTaglineThree}
             </p>
-            <p
-              ref={textFour}
-              className="tablet:text-6xl laptop:text-6xl laptopl:text-[30px] p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </p>
+            <div className="p-2 laptop:p-0 w-full" ref={aboutRef}>
+              <p className="mt-2 text-lg laptop:text-lg laptop:w-4/5">
+                {data.aboutpara}
+              </p>
+            </div>
           </div>
-
-          <Socials className="mt-2 laptop:mt-5" />
+          <Socials className="" />
         </div>
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <p className="text-2xl text-bold">Work.</p>
 
-          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+        <div className="p-2 laptop:p-0" ref={workRef}>
+          <p className="mt-2 tablet:text-6xl laptop:text-6xl laptopl:text-[30px] text-bold w-full laptop:w-4/5">
+            Projects.
+          </p>
+
+          <div className="grid grid-cols-1 tablet:grid-cols-2 gap-4 mt-2">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
@@ -103,38 +104,12 @@ export default function Home() {
                 description={project.description}
                 repository={project.url}
                 webSite={project.webSite}
-                onClick={() => window.open(project.url)}
+                onClick={() => window.open(project.webSite)}
               />
             ))}
           </div>
         </div>
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
-          <p className="tablet:m-10 text-2xl text-bold">Services.</p>
-          <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
-            {data.services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                name={service.title}
-                description={service.description}
-              />
-            ))}
-          </div>
-        </div>
-        {/* This button should not go into production */}
-        {process.env.NODE_ENV === 'development' && (
-          <div className="fixed bottom-5 right-5">
-            <Link href="/edit">
-              <Button type="primary">Edit Data</Button>
-            </Link>
-          </div>
-        )}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <p className="tablet:m-10 text-2xl text-bold">About.</p>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
-          </p>
-        </div>
         <Footer />
       </div>
     </div>

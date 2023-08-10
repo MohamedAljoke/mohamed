@@ -102,8 +102,17 @@ const portfolioData = {
         'We combine creative design and technical skills to build striking 3D visualisations that bring your project to life.',
     },
   ],
-  aboutpara:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  aboutpara: `
+Over the past two years, I've immersed myself in the realm of web development, specializing in ReactJs and NodeJs with TypeScript. My expertise spans diverse UI/CSS libraries like Tailwind, Material UI, antd, and bootstrap, resulting in captivating user interfaces.
+
+I seamlessly integrated Redux/react-query for integrating the frontEnd with the backEnd, employed testing tools like jest and vitest, and optimized form handling using react-hook-form and zod for data integrity.
+
+I've also learned NextJs for server-side rendering and static site generation, enhancing performance and SEO. I've even ventured into mobile development using Flutter, successfully launching MVPs.
+
+On the backend, I've adeptly used NodeJs with express, NestJs, and AdonisJs, integrating SQL/NoSQL databases. I've also navigated CI/CD pipelines with GitLab and GitHub, ensuring seamless development and deployment.
+
+In summary, my journey showcases a versatile developer skilled in crafting captivating and efficient web applications across the stack.
+    `,
   resume: {
     tagline: "👋  I'm a software engineer, product designer.",
     description:
