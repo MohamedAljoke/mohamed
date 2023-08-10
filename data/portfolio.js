@@ -134,12 +134,7 @@ In summary, my journey showcases a versatile developer skilled in crafting capti
           'Worked on the frontend of a React application, Worked on the frontend of a React application',
       },
     ],
-    education: {
-      universityName: 'University X',
-      universityDate: '2016-2020',
-      universityPara:
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book',
-    },
+
     languages: ['Javascript', 'HTML5', 'CSS', 'Python', 'Go'],
     frameworks: ['React', 'Typescript', 'NodeJs'],
     others: ['Figma', 'AdobeXD', 'AWS'],
