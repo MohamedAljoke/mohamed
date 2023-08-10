@@ -1,14 +1,11 @@
 import { useRef } from 'react';
 import Header from '../components/Header';
-import ServiceCard from '../components/ServiceCard';
 import Socials from '../components/Socials';
 import WorkCard from '../components/WorkCard';
 import { useIsomorphicLayoutEffect } from '../utils';
 import { stagger } from '../animations';
 import Footer from '../components/Footer';
 import Head from 'next/head';
-import Button from '../components/Button';
-import Link from 'next/link';
 
 // Local Data
 import data from '../data/portfolio';
@@ -63,12 +60,6 @@ export default function Home() {
         />
         <div className="laptop:mt-20 mt-10">
           <div className="">
-            <p
-              ref={textOne}
-              className="tablet:text-6xl laptop:text-6xl laptopl:text-[70px] p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
-            >
-              {data.headerTaglineOne}
-            </p>
             <p
               ref={textTwo}
               className="tablet:text-6xl laptop:text-6xl laptopl:text-[70px] font-semibold text-bold w-full laptop:w-4/5"
