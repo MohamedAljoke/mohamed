@@ -20,7 +20,17 @@ const portfolioData = {
       title: 'LinkedIn',
       link: 'https://www.linkedin.com/in/mohamed-aljoke-a23217186/',
     },
-    { id: '3', title: 'Email', link: 'mailto:mohammed.maljoke@gmail.com' },
+    {
+      id: '3',
+      title: 'Youtube',
+      link: 'https://www.youtube.com/channel/UCkUgsd4IUob6IUVF1EP13eA',
+    },
+    {
+      id: '4',
+      title: 'Blog',
+      link: 'https://devmohami.hashnode.dev/',
+    },
+    { id: '5', title: 'Email', link: 'mailto:mohammed.maljoke@gmail.com' },
   ],
   projects: [
     {
